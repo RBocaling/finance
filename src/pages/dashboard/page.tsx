@@ -50,9 +50,6 @@ const Dashboard = () => {
    
   return (
     <div className='py-10 px-[6.5rem] space-y-7 text-white'>
-        <div className="">
-          <img src={AUPLogo} alt="Logo" className="w-full h-20" />
-        </div>
         <h1 className='text-4xl leading-[3.375rem] font-semibold'>Dashboard</h1>
         <div className='flex flex-wrap gap-8'>
             <DashboardCard 

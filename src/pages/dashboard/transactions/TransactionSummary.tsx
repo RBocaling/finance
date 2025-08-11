@@ -13,13 +13,13 @@ const overviewData = [
         title: "On Process",
         value: 323000.00,
     },
+]
+
+const overviewData1 = [
     {
         title: "Open",
         value: 42729.09,
     },
-]
-
-const overviewData1 = [
     {
         title: "Pending",
         value: 5060692.09,
@@ -27,16 +27,6 @@ const overviewData1 = [
     },
     {
         title: "Request for Termination",
-        value: 5060692.09,
-        total: 5060692.09,
-    },
-    {
-        title: "GCA QMGT Locked",
-        value: 5060692.09,
-        total: 5060692.09,
-    },
-    {
-        title: "GAE QMGT Locked",
         value: 5060692.09,
         total: 5060692.09,
     },
@@ -54,6 +44,19 @@ const TransactionSummary = () => {
                             <span className="text-base leading-6 font-bold">${formatNumber(item.value)}</span>
                         </div>
                     ))}
+                    <div className=" px-4 rounded-lg border border-[#4C4C4C] ">
+                        <div className="flex py-4 justify-between border-b border-[#4C4C4C]">
+                            <span className="text-sm leading-6">GCA QMGT Locked</span>
+                            <div className="flex flex-col text-end ">
+                                <span className="text-base leading-6 font-bold">42,116.88</span>
+                                <span className="text-base leading-6">= $4,548,622.91</span>
+                            </div>
+                        </div>
+                        <div className="flex justify-between py-4">
+                            <span className="text-sm leading-6">Expected Termination</span>
+                            <span className="text-base leading-6 font-bold">$1,048,622.91</span>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -65,6 +68,19 @@ const TransactionSummary = () => {
                             <span className="text-base leading-6 font-bold">${formatNumber(item.value)}</span>
                         </div>
                     ))}
+                    <div className=" px-4 rounded-lg border border-[#4C4C4C] ">
+                        <div className="flex py-4 justify-between border-b border-[#4C4C4C]">
+                            <span className="text-sm leading-6">GAE QMGT Locked</span>
+                            <div className="flex flex-col text-end ">
+                                <span className="text-base leading-6 font-bold">147,947.11</span>
+                                <span className="text-base leading-6">= $15,978,287.72</span>
+                            </div>
+                        </div>
+                        <div className="flex justify-between py-4">
+                            <span className="text-sm leading-6">Expected Termination</span>
+                            <span className="text-base leading-6 font-bold">$3,978,287.72</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
