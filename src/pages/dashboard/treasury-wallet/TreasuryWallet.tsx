@@ -32,70 +32,56 @@ const barTypes: BarTypeConfig[] = [
 const groupData = [
   {
     label: "Jan 2025",
-    value1: 5060692.09,
-    value2: 4060692.09,
-    value3: 3060692.09,
-    value4: 2060692.09,
+    value1: 5060692.1,
+    value2: 4060692.2,
+    value3: 3060692.3,
+    value4: 2060692.4,
   },
   {
     label: "Feb 2025",
-    value1: 5060692.09,
-    value2: 4060692.09,
-    value3: 3060692.09,
-    value4: 2060692.09,
+    value1: 5060692.5,
+    value2: 4060692.6,
+    value3: 3060692.7,
+    value4: 2060692.8,
   },
   {
     label: "Mar 2025",
-    value1: 5060692.09,
-    value2: 4060692.09,
-    value3: 3060692.09,
-    value4: 2060692.09,
+    value1: 5060692.9,
+    value2: 4060692.1,
+    value3: 3060692.11,
+    value4: 2060692.12,
   },
   {
     label: "Apr 2025",
-    value1: 5060692.09,
-    value2: 4060692.09,
-    value3: 3060692.09,
-    value4: 2060692.09,
+    value1: 5060692.13,
+    value2: 4060692.14,
+    value3: 3060692.15,
+    value4: 2060692.16,
   },
   {
     label: "May 2025",
-    value1: 5060692.09,
-    value2: 4060692.09,
-    value3: 3060692.09,
-    value4: 2060692.09,
+    value1: 5060692.17,
+    value2: 4060692.18,
+    value3: 3060692.19,
+    value4: 2060692.2,
   },
   {
     label: "Jun 2025",
-    value1: 5060692.09,
-    value2: 4060692.09,
-    value3: 3060692.09,
-    value4: 2060692.09,
+    value1: 5060692.21,
+    value2: 4060692.22,
+    value3: 3060692.23,
+    value4: 2060692.24,
   },
 ];
 
 const TreasuryWallet = () => {
   return (
     <div className="space-y-8">
-        <div className="rounded-2xl p-6 border border-[#625339] space-y-6">
-            <div className="flex justify-between items-center">
-                <h1 className='text-xl leading-8 font-semibold text-[#DCA955]'>USDT Month to Month View</h1>
-                <DateRangePicker />
-            </div>
-            <div className="flex justify-center rounded-2xl bg-[#2C2C2C] p-4">
-                <TreasuryCard
-                    data={sampleData}
-                />
-            </div>
-            <div>
-                <GroupedBarChart data={groupData} barTypes={barTypes} className="px-8 pr-20" />
-            </div>
-        </div>
-        <div className="rounded-2xl p-6 border border-[#625339] space-y-6">
-            <TreasurySummary />
-        </div>
+      <div className="rounded-2xl p-6 border border-[#625339] space-y-6">
+        <TreasurySummary />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default TreasuryWallet

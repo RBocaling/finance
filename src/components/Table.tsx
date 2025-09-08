@@ -19,8 +19,8 @@ const Table: React.FC<TableProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(rowsPerPageOptions[0]);
 
-  const totalPages = Math.ceil(data.length / rowsPerPage);
-  const paginatedData = data.slice(
+  const totalPages = Math.ceil(data?.length / rowsPerPage);
+  const paginatedData = data?.slice(
     (currentPage - 1) * rowsPerPage,
     currentPage * rowsPerPage
   );
@@ -32,34 +32,37 @@ const Table: React.FC<TableProps> = ({
 
   return (
     <div className="w-full text-sm">
-  {/* Rounded Wrapper */}
-  <div className="overflow-hidden rounded-lg shadow">
-    <table className="w-full border-separate border-spacing-0">
-      <thead className="bg-[#131210] text-white">
-        <tr>
-          {columns.map((col) => (
-            <th
-              key={col.key}
-              className="text-left px-4 py-2"
-            >
-              {col.label}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody className="text-white bg-[#1E1E1E]">
-        {paginatedData.map((row, rowIndex) => (
-          <tr key={rowIndex} className="rounded-b-lg border border-[#4C4C4C]">
-            {columns.map((col) => (
-              <td key={col.key} className="px-4 py-2 border-b border-[#4C4C4C]">
-                {row[col.key]}
-              </td>
+      {/* Rounded Wrapper */}
+      <div className="overflow-hidden rounded-lg shadow">
+        <table className="w-full border-separate border-spacing-0">
+          <thead className="bg-[#131210] text-white">
+            <tr>
+              {columns.map((col) => (
+                <th key={col.key} className="text-left px-4 py-2">
+                  {col.label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="text-white bg-[#1E1E1E]">
+            {paginatedData?.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className="rounded-b-lg border border-[#4C4C4C]"
+              >
+                {columns.map((col) => (
+                  <td
+                    key={col.key}
+                    className="px-4 py-2 border-b border-[#4C4C4C]"
+                  >
+                    {row[col.key]}
+                  </td>
+                ))}
+              </tr>
             ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
+          </tbody>
+        </table>
+      </div>
 
       {/* Footer */}
       <div className="flex justify-between items-center mt-4 text-sm">
