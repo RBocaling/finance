@@ -11,7 +11,7 @@ const useGetFinance = () => {
        queryFn: getFinanceApi,
      });
     
-    return { data, isLoading:false, isError:false };
+    return { data, isLoading, isError };
 }
 
 export default useGetFinance;

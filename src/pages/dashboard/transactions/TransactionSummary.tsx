@@ -68,7 +68,7 @@ const TransactionSummary = () => {
         </div>
         <div className="flex flex-col   space-y-4 w-full">
           {data?.transactionStatusSummary?.expectedTermination?.map(
-            (item: any, index: number) => (
+            (item: any) => (
               <div className=" px-4 rounded-lg border border-[#4C4C4C] ">
                 <div className="flex py-7 justify-between border-b border-[#4C4C4C]">
                   <span className="text-sm leading-6">{item?.type}</span>

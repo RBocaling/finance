@@ -1,11 +1,9 @@
-import DashboardCard from './DashboardCard'
-import Request from './Request'
-import PieChart from '../../components/PieChart'
-import BarChart, { type BarData } from '../../components/BarChart'
-import TreasuryWallet from './treasury-wallet/TreasuryWallet'
-import AUPLogo from "../../assets/AUPLogo.svg"
-import Transactions from './transactions/Transactions'
-import StatsAndAnalytics from './stats-analytics/StatsAndAnalytics'
+import DashboardCard from "./DashboardCard";
+import PieChart from "../../components/PieChart";
+import BarChart, { type BarData } from "../../components/BarChart";
+import TreasuryWallet from "./treasury-wallet/TreasuryWallet";
+import Transactions from "./transactions/Transactions";
+import StatsAndAnalytics from "./stats-analytics/StatsAndAnalytics";
 import useGetFinance from "../../hooks/useGetFinance";
 import { useERC20Balance } from "../../hooks/useERC20Balance";
 
@@ -164,11 +162,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
-
-
-
-
-
-
